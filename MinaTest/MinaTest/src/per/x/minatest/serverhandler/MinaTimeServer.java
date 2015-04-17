@@ -23,7 +23,7 @@ public class MinaTimeServer {
 		ioAcceptor.setHandler(new TimeServerHandler());
 		ioAcceptor.setDefaultLocalAddress(new InetSocketAddress(PORT));
 		ioAcceptor.getSessionConfig().setReadBufferSize(2048);
-		ioAcceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 10);
+		ioAcceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 1000);
 		try {
 			ioAcceptor.bind();
 		} catch (IOException e) {

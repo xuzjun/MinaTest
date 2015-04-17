@@ -24,7 +24,7 @@ public class MinaTimeClient {
 		ConnectFuture cf = connector.connect(new InetSocketAddress(IP, PORT));
 		cf.awaitUninterruptibly();
 		cf.getSession().write("hello");
-		cf.getSession().write("quit");
+		
 		cf.getSession().getCloseFuture().awaitUninterruptibly();
 		connector.dispose();
 	}
